@@ -21,6 +21,23 @@ swage.to_csv('unique_gender_yearsExperience.csv', sep='\t')
 
 
 ####################question 2#################
-
-
+#Limit to columns of interest
+q2 = wages[['gender', 'yearsExperience', 'wage']].copy()
+#sort by wage
+sortedq2 = q2.sort_values(by=['wage'])
+#select highest earner
+Highest = sortedq2.tail(1)
+#Print line for highest earner
+print (Highest)
+#select lowest earner
+Lowest = sortedq2.head(1)
+#Print line for lowest earner
+print (Lowest)
+#Find top 10 earners
+Top10 = sortedq2.tail(10)
+#Count number of females
+Top10females = ####Help####
+list.count(Top10females)        
 ############question 3##############
+
+
