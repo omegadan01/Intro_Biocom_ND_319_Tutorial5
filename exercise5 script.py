@@ -36,7 +36,9 @@ print (Lowest)
 #Find top 10 earners
 Top10 = sortedq2.tail(10)
 #Count number of females
-Top10females = ####Help####
+Topfemales = 0
+for female in Top10:
+    Topfemales = Topfemales + 1 #(this part doesn't work)
 list.count(Top10females)        
 ############question 3##############
 
