@@ -40,4 +40,8 @@ ctopfemale= Topfemales.gender.count()
 print (ctopfemale)
 
 ############question 3##############
-
+wages12 = wages[wages.yearsSchool==12] #selects people with 12 years of school
+min12 = min(wages12.wage) #minimum wage of people with 12 years of school
+wages16 = wages[wages.yearsSchool==16] #selects people with 16 years of school
+min16 = min(wages16.wage) #minimum wage of people with 16 years of school
+print(min16-min12)
