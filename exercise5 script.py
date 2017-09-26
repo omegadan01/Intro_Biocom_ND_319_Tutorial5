@@ -1,5 +1,4 @@
 ###########question 1################
-
 #load the dataset
 import pandas
 wages = pandas.read_csv("wages.csv")
@@ -12,9 +11,6 @@ dwage=wages2.drop_duplicates(subset=['gender','yearsExperience'])
 
 #sort columns
 swage= dwage.sort_values(by=["gender", "yearsExperience"])
-
-#check dataframe
-print swage
 
 #write.csv
 swage.to_csv('unique_gender_yearsExperience.csv', sep='\t')
@@ -35,11 +31,13 @@ Lowest = sortedq2.head(1)
 print (Lowest)
 #Find top 10 earners
 Top10 = sortedq2.tail(10)
-#Count number of females
-Topfemales = 0
-for female in Top10:
-    Topfemales = Topfemales + 1 #(this part doesn't work)
-list.count(Top10females)        
-############question 3##############
 
+##Count number of females
+#pulls out females from top 10
+Topfemales=Top10.loc[Top10['gender'] == "female"]
+#counts females in top 10
+ctopfemale= Topfemales.gender.count()
+print (ctopfemale)
+
+############question 3##############
 
